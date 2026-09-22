@@ -66,14 +66,14 @@ footer{border-top:1px solid var(--line);padding:30px 0 45px;color:#8f9aa5}
 .about-panel{
   max-width:1120px;margin:0 auto;padding:34px 40px;border:1px solid var(--line);
   border-radius:var(--radius);background:rgba(13,17,22,.78);
-  display:grid;grid-template-columns:280px minmax(0,1fr);gap:42px;align-items:center;
+  display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:center;
 }
-.about-visual{width:280px;overflow:hidden;border-radius:16px;background:#050708}
-.about-visual img{width:100%;height:210px;display:block;object-fit:cover}
-.about-copy{padding:6px 8px 6px 0}
+.about-visual{width:300px;overflow:hidden;border-radius:16px;background:#050708}
+.about-visual img{width:100%;height:225px;display:block;object-fit:cover}
+.about-copy{padding:10px 20px 10px 0;max-width:680px}
 .about-kicker{margin:0 0 8px;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.24em}
 .about-panel h2{margin:0 0 22px;font-size:30px}
-.about-panel p{margin:0 0 14px;color:#cbd3da;line-height:1.9}
+.about-panel p{margin:0 0 18px;color:#cbd3da;line-height:1.75;font-size:16px}
 .about-panel .about-message{margin:26px 0 0;color:#fff;font-weight:700;letter-spacing:.06em}
 @media(max-width:850px){
   .about-panel{grid-template-columns:1fr;gap:24px;padding:24px}
