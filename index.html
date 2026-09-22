@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>T-Labs | Simple Software.</title>
+  <meta name="description" content="T-LabsのWindows向けシンプルアプリケーション。">
+  <style>
+    :root{
+      --bg:#07090b; --panel:#0d1116; --panel2:#11171d; --text:#f4f7fa;
+      --muted:#9aa6b2; --line:#26313b; --accent:#4a91ff;
+      --radius:22px; --max:1500px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--text); background:
+      radial-gradient(circle at 18% 0%,#17202a 0,transparent 28rem),
+      radial-gradient(circle at 82% 12%,#101820 0,transparent 25rem),var(--bg);
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",
+      "Noto Sans JP",sans-serif;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
+    header{padding:38px 0 26px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:17px}
+    .dog{width:72px;height:72px;display:grid;place-items:center;font-size:54px}
+    .brand-name{font-size:clamp(32px,4vw,58px);font-weight:800;letter-spacing:-.045em}
+    .tag{font-size:12px;letter-spacing:.24em;color:#c7cdd3;margin-top:4px}
+    nav{display:flex;gap:32px;color:#dce1e6;font-weight:600}
+    nav a:hover{color:white}
+    .hero{display:flex;justify-content:flex-end;padding:0 4px 44px}
+    .hero div{text-align:right}
+    .hero h1{font-size:25px;margin:0 0 8px;font-weight:600}
+    .hero p{margin:0;color:#b7c0c9;font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-bottom:42px}
+    .card{
+      min-height:500px;padding:30px 26px 24px;border:1px solid #3b4854;border-radius:var(--radius);
+      background:linear-gradient(145deg,rgba(22,30,38,.94),rgba(8,12,16,.97));
+      box-shadow:inset 0 1px rgba(255,255,255,.05),0 16px 40px rgba(0,0,0,.2);
+      display:flex;flex-direction:column;transition:.2s ease;
+    }
+    .card:hover{transform:translateY(-4px);border-color:#647483}
+    .icon{
+      width:90px;height:90px;border-radius:22px;margin:0 auto 20px;display:grid;place-items:center;
+      font-size:43px;background:linear-gradient(145deg,#18212b,#0c1117);
+      border:1px solid #3c4c5c;box-shadow:0 12px 28px rgba(0,0,0,.3);
+    }
+    .card h2{text-align:center;font-size:30px;margin:0 0 4px}
+    .type{text-align:center;color:#d5dbe1;margin:0 0 24px}
+    .desc{line-height:1.85;color:#e1e5e9;margin:0 0 20px;flex:1}
+    .os{text-align:center;color:#c6cdd4;margin-bottom:20px;font-size:14px}
+    .buttons{display:grid;gap:10px}
+    .btn{
+      min-height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+      font-weight:700;border:1px solid #46515c;transition:.15s ease;
+    }
+    .download{background:linear-gradient(135deg,var(--accent),#2775e8);border:0}
+    .btn:hover{filter:brightness(1.12);transform:translateY(-1px)}
+    .github{background:#171c21}
+    .soon{opacity:.55}
+    footer{border-top:1px solid var(--line);padding:30px 0 45px;color:#8f9aa5}
+    .footer{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .footer strong{color:#fff;font-size:20px}
+    @media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){
+      .wrap{width:min(calc(100% - 28px),var(--max))}
+      nav{display:none}.hero{justify-content:flex-start;padding-top:20px}.hero div{text-align:left}
+      .grid{grid-template-columns:1fr}.card{min-height:440px}.dog{width:52px;height:52px;font-size:42px}
+      .footer{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">
+      <div class="dog" aria-hidden="true">🐕</div>
+      <div><div class="brand-name">T-Labs</div><div class="tag">SIMPLE SOFTWARE. A BETTER TOMORROW.</div></div>
+    </a>
+    <nav><a href="#">Home</a><a href="#apps">Apps</a><a href="#about">About</a><a href="https://github.com/">GitHub</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div><h1>つくるを、もっと楽しく。</h1><p>Small Tools. Big Possibilities.</p></div>
+  </section>
+
+  <section id="apps" class="grid">
+    <article class="card">
+      <div class="icon">📝</div><h2>TText</h2><p class="type">テキストエディタ</p>
+      <p class="desc">シンプルで高速なWindows向けテキストエディタ。日常の編集から開発まで、軽快な操作を目指します。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">📄</div><h2>TPdf</h2><p class="type">PDFツール</p>
+      <p class="desc">PDFの閲覧・結合・分割・ページ編集などをシンプルに。必要な機能を、使いやすくまとめます。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">✉️</div><h2>TMail</h2><p class="type">メール閲覧ツール</p>
+      <p class="desc">シンプルで快適なメール閲覧・管理ツール。大切なやり取りを、すっきり見やすく。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">📗</div><h2>TBook</h2><p class="type">電子書籍管理ツール</p>
+      <p class="desc">ローカルの書籍をすっきり管理。読む・探す・整理するを、シンプルな操作で。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">▶</div><h2>TVideo</h2><p class="type">動画編集ツール</p>
+      <p class="desc">シンプルな操作で動画のカット・結合・変換。日常の動画編集を、もっと手軽に。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">ⓘ</div><h2>TInfo</h2><p class="type">システム情報ツール</p>
+      <p class="desc">PCのハードウェア・ソフトウェア情報をシンプルに表示。環境確認やトラブル対応にも。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card">
+      <div class="icon">⚙</div><h2>TUtils</h2><p class="type">ユーティリティ集</p>
+      <p class="desc">日常のちょっとした作業を効率化する便利ツール集。シンプルに、素早く。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
+    </article>
+
+    <article class="card soon">
+      <div class="icon">＋</div><h2>Coming Soon</h2><p class="type">次のツールを開発中</p>
+      <p class="desc">もっと便利に、もっと楽しく。新しいT-Labsアプリを追加していきます。</p>
+      <div class="os">▣ &nbsp; Windows 10 / 11</div>
+      <div class="buttons"><span class="btn github">近日公開</span></div>
+    </article>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="wrap footer">
+    <div><strong>🐕 T-Labs</strong><br><small>SIMPLE SOFTWARE. A BETTER TOMORROW.</small></div>
+    <div>© 2026 T-Labs. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
