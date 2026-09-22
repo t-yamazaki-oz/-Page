@@ -26,7 +26,7 @@
     header{padding:38px 0 26px}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:30px}
     .brand{display:flex;align-items:center;gap:17px}
-    .dog{width:72px;height:72px;display:grid;place-items:center;font-size:54px}
+    .dog{width:72px;height:72px;display:block;object-fit:contain}
     .brand-name{font-size:clamp(32px,4vw,58px);font-weight:800;letter-spacing:-.045em}
     .tag{font-size:12px;letter-spacing:.24em;color:#c7cdd3;margin-top:4px}
     nav{display:flex;gap:32px;color:#dce1e6;font-weight:600}
@@ -44,9 +44,8 @@
     }
     .card:hover{transform:translateY(-4px);border-color:#647483}
     .icon{
-      width:90px;height:90px;border-radius:22px;margin:0 auto 20px;display:grid;place-items:center;
-      font-size:43px;background:linear-gradient(145deg,#18212b,#0c1117);
-      border:1px solid #3c4c5c;box-shadow:0 12px 28px rgba(0,0,0,.3);
+      width:118px;height:118px;margin:0 auto 18px;display:block;object-fit:contain;
+      filter:drop-shadow(0 12px 22px rgba(0,0,0,.28));
     }
     .card h2{text-align:center;font-size:30px;margin:0 0 4px}
     .type{text-align:center;color:#d5dbe1;margin:0 0 24px}
@@ -77,7 +76,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#">
-      <div class="dog" aria-hidden="true">🐕</div>
+      <img class="dog" src="assets/images/brand/dog-logo.png" alt="T-Labs">
       <div><div class="brand-name">T-Labs</div><div class="tag">SIMPLE SOFTWARE. A BETTER TOMORROW.</div></div>
     </a>
     <nav><a href="#">Home</a><a href="#apps">Apps</a><a href="#about">About</a><a href="https://github.com/">GitHub</a></nav>
@@ -91,50 +90,36 @@
 
   <section id="apps" class="grid">
     <article class="card">
-      <div class="icon">📝</div><h2>TText</h2><p class="type">テキストエディタ</p>
+      <img class="icon" src="assets/images/apps/TText.png" alt="TText"><h2>TText</h2><p class="type">テキストエディタ</p>
       <p class="desc">シンプルで高速なWindows向けテキストエディタ。日常の編集から開発まで、軽快な操作を目指します。</p>
       <div class="os">▣ &nbsp; Windows 10 / 11</div>
       <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
     </article>
 
     <article class="card">
-      <div class="icon">📄</div><h2>TPdf</h2><p class="type">PDFツール</p>
+      <img class="icon" src="assets/images/apps/TPdf.png" alt="TPdf"><h2>TPdf</h2><p class="type">PDFツール</p>
       <p class="desc">PDFの閲覧・結合・分割・ページ編集などをシンプルに。必要な機能を、使いやすくまとめます。</p>
       <div class="os">▣ &nbsp; Windows 10 / 11</div>
       <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
     </article>
 
     <article class="card">
-      <div class="icon">✉️</div><h2>TMail</h2><p class="type">メール閲覧ツール</p>
+      <img class="icon" src="assets/images/apps/TMail.png" alt="TMail"><h2>TMail</h2><p class="type">メール閲覧ツール</p>
       <p class="desc">シンプルで快適なメール閲覧・管理ツール。大切なやり取りを、すっきり見やすく。</p>
       <div class="os">▣ &nbsp; Windows 10 / 11</div>
       <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
     </article>
 
     <article class="card">
-      <div class="icon">📗</div><h2>TBook</h2><p class="type">電子書籍管理ツール</p>
+      <img class="icon" src="assets/images/apps/TBook.png" alt="TBook"><h2>TBook</h2><p class="type">電子書籍管理ツール</p>
       <p class="desc">ローカルの書籍をすっきり管理。読む・探す・整理するを、シンプルな操作で。</p>
       <div class="os">▣ &nbsp; Windows 10 / 11</div>
       <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
     </article>
 
     <article class="card">
-      <div class="icon">▶</div><h2>TVideo</h2><p class="type">動画編集ツール</p>
-      <p class="desc">シンプルな操作で動画のカット・結合・変換。日常の動画編集を、もっと手軽に。</p>
-      <div class="os">▣ &nbsp; Windows 10 / 11</div>
-      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
-    </article>
-
-    <article class="card">
-      <div class="icon">ⓘ</div><h2>TInfo</h2><p class="type">システム情報ツール</p>
-      <p class="desc">PCのハードウェア・ソフトウェア情報をシンプルに表示。環境確認やトラブル対応にも。</p>
-      <div class="os">▣ &nbsp; Windows 10 / 11</div>
-      <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
-    </article>
-
-    <article class="card">
-      <div class="icon">⚙</div><h2>TUtils</h2><p class="type">ユーティリティ集</p>
-      <p class="desc">日常のちょっとした作業を効率化する便利ツール集。シンプルに、素早く。</p>
+      <img class="icon" src="assets/images/apps/TSticky.png" alt="TSticky"><h2>TSticky</h2><p class="type">付箋紙アプリ</p>
+      <p class="desc">デスクトップにさっと残せる、シンプルな付箋紙アプリ。日々のメモやちょっとした覚え書きを軽快に管理します。</p>
       <div class="os">▣ &nbsp; Windows 10 / 11</div>
       <div class="buttons"><a class="btn download" href="#">↓ &nbsp; ダウンロード</a><a class="btn github" href="#">GitHubで見る</a></div>
     </article>
@@ -150,7 +135,7 @@
 
 <footer id="about">
   <div class="wrap footer">
-    <div><strong>🐕 T-Labs</strong><br><small>SIMPLE SOFTWARE. A BETTER TOMORROW.</small></div>
+    <div class="brand"><img class="dog" src="assets/images/brand/dog-logo.png" alt=""><div><strong>T-Labs</strong><br><small>SIMPLE SOFTWARE. A BETTER TOMORROW.</small></div></div>
     <div>© 2026 T-Labs. All rights reserved.</div>
   </div>
 </footer>
